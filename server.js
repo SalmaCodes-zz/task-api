@@ -10,6 +10,8 @@ app.use(bodyParser.json());
 // Require path
 var path = require('path');
 
+app.use(express.static( __dirname + '/angular-app/dist' ));
+
 
 var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/tasks');
